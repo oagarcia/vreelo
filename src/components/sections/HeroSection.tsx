@@ -7,12 +7,12 @@ export default function HeroSection() {
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={`${styles.title} animate-slide-up`}>
-            Engineering <br/>
-            <span className={styles.highlight}>Optimized Insights</span>
+            Engineering <br />
+            <span className={styles.highlight}><span className={styles.extraHighlight}>Optimized</span> Insights</span>
           </h1>
           <p className={`${styles.subtitle} animate-slide-up delay-100`}>
-            We build robust software and integrate AI automations to transform 
-            your operations. A true partnership balancing powerful technology 
+            We build robust software and integrate AI automations to transform
+            your operations. A true partnership balancing powerful technology
             and deep human creativity.
           </p>
           <div className={`${styles.actions} animate-fade-in delay-200`}>

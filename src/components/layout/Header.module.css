@@ -71,9 +71,116 @@
   box-shadow: 0 4px 14px rgba(0, 255, 103, 0.2);
 }
 
+.mobileMenuBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.hamburgerLine {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--foreground);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.lineOpen1 {
+  transform: rotate(45deg);
+}
+
+.lineOpen2 {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.lineOpen3 {
+  transform: rotate(-45deg);
+}
+
+.mobileNav {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav {
     display: none;
-    /* Hide nav on mobile for this simple version, normally we'd add a hamburger menu */
+  }
+  
+  .mobileMenuBtn {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    background: #fcfcfcf2;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid var(--gray-soft);
+    z-index: 99;
+  }
+
+  .mobileNavOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .mobileNavLink {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .mobileNavLink:hover {
+    color: var(--accent-green);
+  }
+
+  .mobileCtaButton {
+    background-color: var(--foreground);
+    color: var(--background);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobileCtaButton:hover {
+    background-color: var(--accent-green);
+    color: var(--foreground);
   }
 }

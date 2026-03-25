@@ -1,20 +1,21 @@
+import Image from 'next/image';
 import styles from './ServicesSection.module.css';
 
 const services = [
   {
     title: 'Software Engineering',
     description: 'Bespoke, scalable architectures built with modern stacks. We ensure your core systems are solid, performant, and secure.',
-    icon: '⚙️',
+    icon: '/software-dark.svg',
   },
   {
     title: 'AI Automation',
     description: 'Integrating intelligent agents and machine learning to optimize workflows, reduce manual data entry, and uncover insights.',
-    icon: '🧠',
+    icon: '/automation-dark.svg',
   },
   {
     title: 'Technology Consulting',
     description: 'Partnering with you to chart a strategic roadmap that aligns with your business goals and leverages emerging tech.',
-    icon: '💡',
+    icon: '/consulting-dark.svg',
   }
 ];
 
@@ -28,15 +29,17 @@ export default function ServicesSection() {
             A complete suite of technical expertise designed to accelerate your business.
           </p>
         </div>
-        
+
         <div className={styles.grid}>
           {services.map((service, index) => (
-            <div 
-              key={service.title} 
-              className={`${styles.card} animate-slide-up`} 
+            <div
+              key={service.title}
+              className={`${styles.card} animate-slide-up`}
               style={{ animationDelay: `${(index + 2) * 100}ms` }}
             >
-              <div className={styles.iconWrapper}>{service.icon}</div>
+              <div className={styles.iconWrapper}>
+                <Image src={service.icon} alt={service.title} width={40} height={40} />
+              </div>
               <h3 className={styles.cardTitle}>{service.title}</h3>
               <p className={styles.cardDesc}>{service.description}</p>
             </div>

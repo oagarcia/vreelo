@@ -42,7 +42,11 @@
 }
 
 .highlight {
-  color: var(--accent-orange);
+  color: var(--accent-purple);
+}
+
+.extraHighlight {
+  background-color: var(--text-highlight);
 }
 
 .subtitle {
