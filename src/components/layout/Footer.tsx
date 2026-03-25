@@ -10,7 +10,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <Link href="/">
               <Image
-                src="/logo.svg"
+                src="/logo-purple.svg"
                 alt="Vreelo - Artificial + Human Intelligence"
                 width={140}
                 height={40}

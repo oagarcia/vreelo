@@ -8,7 +8,7 @@ export default function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/logo.svg"
+            src="/logo-purple.svg"
             alt="Vreelo - Artificial + Human Intelligence"
             width={160}
             height={45}
