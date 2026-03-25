@@ -4,9 +4,9 @@
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #fcfcfce9;
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-soft);
   transform: translateY(-100%);
   animation: slideDown 0.8s var(--transition-smooth) forwards;
 }
